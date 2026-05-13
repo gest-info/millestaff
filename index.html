@@ -240,27 +240,31 @@
 
 <script>
 function mostraPagina(idRichiesto, aggiornaUrl = true) {
+    // 1. Nasconde tutte le pagine e l'errore
     const sezioni = document.querySelectorAll('.pagina');
     sezioni.forEach(s => s.style.display = 'none');
     document.getElementById('errore-404').style.display = 'none';
 
     const target = document.getElementById('pagina-' + idRichiesto);
+    const repoName = '/millestaff'; // Nome del repository GitHub
 
     if (target) {
         target.style.display = 'block';
         if (aggiornaUrl) {
+            // Genera il percorso corretto mantenendo il nome del repository
             const path = idRichiesto === 'home'
-                ? '/'
-                : '/' + idRichiesto.replace(/-/g, '/');
+                ? repoName + '/'
+                : repoName + '/' + idRichiesto.replace(/-/g, '/');
             history.pushState({ pagina: idRichiesto }, '', path);
         }
     } else {
         document.getElementById('errore-404').style.display = 'block';
         if (aggiornaUrl) {
-            history.pushState({ pagina: null }, '', '/' + idRichiesto);
+            history.pushState({ pagina: null }, '', repoName + '/' + idRichiesto);
         }
     }
 
+    // Gestione classe active sui link della barra di navigazione
     document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
 }
 
@@ -275,9 +279,18 @@ window.addEventListener('popstate', function(e) {
 
 // Legge l'URL al caricamento per gestire link diretti
 window.onload = function() {
-    const path = window.location.pathname.replace(/^\//, '').replace(/\/$/, '');
+    const repoName = '/millestaff';
+    let path = window.location.pathname;
+
+    // Rimuove il nome del repository dal percorso per capire quale pagina mostrare
+    if (path.startsWith(repoName)) {
+        path = path.substring(repoName.length);
+    }
     
-    if (!path || path === '') {
+    // Pulisce gli slash iniziali e finali rimasti
+    path = path.replace(/^\//, '').replace(/\/$/, '');
+    
+    if (!path || path === '' || path === 'index.html') {
         mostraPagina('home', false);
     } else {
         // Converte /eventi/conclusi → eventi-conclusi
@@ -285,9 +298,10 @@ window.onload = function() {
         mostraPagina(idPagina, false);
     }
 
-    // Imposta lo stato iniziale nello storico
+    // Imposta lo stato iniziale nello storico del browser
+    const statoIniziale = path && path !== 'index.html' ? path.replace(/\//g, '-') : 'home';
     history.replaceState(
-        { pagina: path ? path.replace(/\//g, '-') : 'home' },
+        { pagina: statoIniziale },
         '',
         window.location.pathname
     );
