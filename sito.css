@@ -267,3 +267,6 @@ a { text-decoration: none; color: inherit; }
 #errore-404 {
    display: none;
 }
+#pagina-home {
+   display: block;
+}
