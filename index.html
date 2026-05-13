@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <title>Millestaff</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="sito.css">
+    <link rel="icon" href="logo.jpg">
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    <!-- Barra "Prossimamente" in cima -->
+    <div id="banner-top">Stiamo tornando...</div>
+
+        <!-- Navbar -->
+<nav id="barra-nav">
+    <div id="nav-logo">
+        <img src="logo.jpg" alt="logo" width="40px">
+        <span id="nav-title">Millestaff</span>
+    </div>
+    
+    <div id="nav-links">
+        <a onclick="mostraPagina('home')" class="nav-link active">Home Page</a>
+        <!-- Contenitore Dropdown -->
+        <div class="dropdown">
+            <a class="nav-link">Storia ▾</a>
+            <ul class="dropdown-content">
+                <li><a onclick="mostraPagina('storia')">La nostra Storia</a></li>
+                <li><a onclick="mostraPagina('storia-extra')">Informazioni Staff</a></li>
+            </ul>
+        </div>
+        <a onclick="mostraPagina('contatti')" class="nav-link">Contatti</a>
+        <!-- Drop pagina eventi -->
+        <div class="dropdown">
+            <a class="nav-link">Eventi ▾</a>
+            <ul class="dropdown-content">
+                <li><a onclick="mostraPagina('eventi')">Eventi</a></li>
+                <li><a onclick="mostraPagina('eventi-conclusi')">Conclusi</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+    <!-- ======================
+         PAGINA ERRORE 404
+         ====================== -->
+    <div id="errore-404">
+    <div id="intestazione-home" style="display: none;">
+        <div id="hero-content">
+            <h1>MILLESTAFF</h1>
+        </div>
+
+    </div>
+        <div id="contenuto">
+            <h2>ERRORE DI INDIRIZZAMENTO</h2>
+            <p class="sottotitolo">La pagina a cui stai tentando di arrivare non esiste</p>
+				<div id="bottone">            
+            	<a onclick="mostraPagina('home')">
+            		<button id="bottone" style="align-content: center;">Torna alla Home Page</button>
+            	</a>
+				</div>        
+        </div>
+    </div>
+
+    <!-- ======================
+         PAGINA HOME
+         ====================== -->
+    <div id="pagina-home" class="pagina">
+        <!-- Titolo hero -->
+    <!-- Intestazione con immagine di sfondo -->
+    <div id="intestazione-home">
+        <div id="hero-content">
+            <h1>MILLESTAFF</h1>
+        </div>
+
+    </div>
+        <div id="contenuto">
+            <h2>VI DIAMO IL BENVENUTO NEL SITO DELLO STAFF!</h2>
+            <p class="sottotitolo">Ecco a voi il sito ufficiale di Millestaff!</p>
+            <p class="comunicazione">⚠️ <em>COMUNICAZIONE UFFICIALE</em> ⚠️</p>
+            <p class="testo">
+                È con grande piacere che comunico la riapertura del Gruppo Staff,<br>
+                Con una nuova gestione e con tante nuove idee lo Staff riapre i battenti col nome di<br>
+                "Millestaff"<br>
+                <br>
+                A seguito della sospensione del Progetto "Gruppo Staff"<br>
+                abbiamo avuto tempo per valutare con calma tutti gli eventi e le attività segnandoci<br>
+                e correggendo le criticità riscontrate,<br>
+                il tutto per organizzare eventi sempre migliori!.
+            </p>
+
+            <div id="colonne-home">
+                <div class="colonna">
+                    <a onclick="mostraPagina('eventi')"><img src="img/calendario.png" alt="Calendario" height="217px"></a>
+                    <h3>CALENDARIO</h3>
+                    <p>Visualizza tutti gli eventi in programma<br>e anche quelli passati!</p>
+                </div>
+                <div class="colonna">
+                    <a onclick="mostraPagina('storia')"><img src="img/logo.png" alt="Informazioni" height="217px"></a>
+                    <h3>INFORMAZIONI</h3>
+                    <p>Leggi la storia dello staff,<br>e ricava tutte le informazioni utili!</p>
+                </div>
+                <div class="colonna">
+                    <a onclick="mostraPagina('contatti')"><img src="img/contatti.png" alt="Contatti" height="217px"></a>
+                    <h3>CONTATTI</h3>
+                    <p>Vuoi organizzare un evento?<br>Hai bisogno di informazioni?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================
+         PAGINA STORIA
+         ====================== -->
+	<div id="pagina-storia" class="pagina">
+   	<div id="intestazione" style="background-image: url('img/logo.png')">
+  	  	</div>
+      	<div id="contenuto-storia">
+         	<h2>LA NOSTRA STORIA</h2>
+            <p class="testo">Ciao a tutti! Siamo il Millestaff, quello che una volta si faceva chiamare "Stuff",<br>
+							La nostra passione è organizzare attività di intrattenimento, creando momenti divertenti e coinvolgenti per la nostra comunità.<br>
+							Unisciti a noi e scopri il divertimento senza limiti che solo "Stuff" sa offrire!<br><br> 
+							IL DIVERTIMENTO CON NOI È ASSICURATO<br></p>
+		   		<div class="bottone">
+		  				<a onclick="mostraPagina('storia-extra')">
+							<button id="bottone" name="Ulteriori informazioni" type="button" style="max-width: 120pt">Ulteriori Informazioni</button>        
+						</a>
+         		</div>
+         </div>
+    </div>
+
+    <!-- ======================
+         PAGINA ULTERIORI INFO
+         ====================== -->
+    <div id="pagina-storia-extra" class="pagina">
+        <div id="contenuto">
+         	<h2>INFORMAZIONI</h2>
+        		<h3>LA NOSTRA STORIA</h3>     		
+            <p class="testo">Il Gruppo Staff di Millesimo è un gruppo di ragazzi che organizzano delle attività ed eventi per animare 
+            l'oratorio di Millesimo, è formato da ragazzi di 3°Media e 1° Superiore supervisionati e aiutati dagli animatori della parrocchia.
+            Il gruppo è stato fondato il 3 marzo 2022 da Denis Liccardo, con l'aiuto di Federica Pirotti e Federico Pedrazzi.
+				per animare le serate del Venerdì e Sabato sera. Iniziarono ad organizzare una sorta discoteca (chiamata da loro "DiscoMusik")
+				all'interno durante l'inverno, alternando anche con una sorta di cinema. durante l'arrivo dell'estate la discoteca è stata 
+				spostata nei campi esterni, soprattutto per intrattenere con la musica chi giocava nei campi esterni.
+				Il gruppo ha organizzato anche serate giochi, con il gioco della bottiglia, oppure quello della scatola, ma anche delle
+				attività per cui si è lavorato più di un mese, "Cluedo in real life" , le squadre dovevano scoprire chi è morto, e chi lo ha 
+				ucciso.<br><br>
+				Durante la pausa estiva, si ha continuato a lavorare per creare il nuovo logo, e per organizzare qualche attività.
+				Domenica 22 Ottobre 2023, venne creato l'accordo tra il Gruppo Staff e gli animatori che permette i ragazzi dello Staff ad 
+				aiutare nella realizzazione dei progetti con l’aiuto degli animatori.<br></p>
+         </div>
+    </div>
+    <!-- ======================
+         PAGINA CONTATTI
+         ====================== -->
+    <div id="pagina-contatti" class="pagina">
+        <div id="contenuto-contatti">
+            <h2>CONTATTI</h2>
+            <p class="comunicazione" style="text-align: center;">⚠️ <em>COMUNICAZIONE UFFICIALE</em> ⚠️</p>
+            <p class="testo">Dal 12 Aprile 2024 sino a prossima comunicazione prendere per valido solo il contatto "Denis Liccardo"<br>
+				I social e le email rimarranno attive con risposta automatica e da parte di un utente (a orario ridotto)</p>
+        </div>
+        <div id="colonne-home">
+        	<div class="colonna">
+				<h2>TELEFONO</h2>  
+				<a href="tel:+393501453400">
+				<button id="bottone" type="button" style="width: 100%">Denis Liccardo</button>
+				</a>   
+        	</div>
+        	<div class="colonna">
+				<h2>INSTAGRAM</h2>    
+				<a href="https://sites.google.com/view/gruppostaff">
+				<button id="bottone" type="button" style="width: 100%">Millestaff</button>
+				</a>      	
+        	</div>
+        	<div class="colonna">
+				<h2>E-MAIL</h2>  
+				<a href="mailto:tgsanluigi@gmail.com">
+				<button id="bottone" type="button" style="width: 100%">Centralino</button>
+				</a>         	
+        	</div>
+        </div>
+    </div>
+    <!-- ======================
+         PAGINA EVENTI
+         ====================== -->
+    <div id="pagina-eventi" class="pagina">
+        <div id="contenuto">
+         	<h2>EVENTI</h2>
+        		<h3>Visualizza gli eventi e le attività!</h3>     		
+				<div id="colonne-home" class="bottone">
+					<div class="colonna">
+						<a onclick="mostraPagina('eventi-prox')">
+						<button id="bottone" type="button" style="width: 100%">Eventi in programma</button>
+						</a>    
+					</div>
+					<div class="colonna">
+						<a onclick="mostraPagina('eventi-conclusi')">
+						<button id="bottone" type="button" style="width: 100%">Eventi conclusi</button>
+						</a>
+					</div>
+				</div>	
+					<h2>CALENDARIO</h2>
+					<h3>Al momento il servizio calendario non è attivo<br>Ci scusiamo per il disagio</h3>
+         </div>
+    </div>
+    
+	<!-- ======================
+         PAGINA CONCLUSI
+         ====================== -->
+    <div id="pagina-eventi-conclusi" class="pagina">
+        <div id="contenuto">
+            <h2>EVENTI CONCLUSI</h2>
+            <p class="testo">È presentato in seguito lo storico degli eventi importanti organizzati dallo staff</p>
+        </div>
+        <div id="colonne-home">
+        	<div class="colonna">
+				<h2>2023</h2>  
+				<a onclick="mostraPagina('1-torneo-zonale')">
+				<button id="bottone" type="button" style="width: 100%">1° Torneo Zonale | 13 Ottobre</button>
+				</a>
+				<a onclick="mostraPagina('natale-2023')">
+				<button id="bottone" type="button" style="width: 100%">Festa di Natale | ... Dicembre</button>
+				</a>   
+        	</div>
+        	<div class="colonna">
+				<h2>2024</h2>
+				<a onclick="mostraPagina('2-torneo-zonale')">
+				<button id="bottone" type="button" style="width: 100%">2° Torneo Zonale | 2 Aprile</button>
+				</a>
+        	</div>
+        </div>
+    </div>
+    
+    
+    <!-- Piè di pagina -->
+    <footer> <br>Sito Ufficiale del ©Millestaff</footer>
+
+<script>
+function mostraPagina(idRichiesto, aggiornaUrl = true) {
+    const sezioni = document.querySelectorAll('.pagina');
+    sezioni.forEach(s => s.style.display = 'none');
+    document.getElementById('errore-404').style.display = 'none';
+
+    const target = document.getElementById('pagina-' + idRichiesto);
+
+    if (target) {
+        target.style.display = 'block';
+        if (aggiornaUrl) {
+            const path = idRichiesto === 'home'
+                ? '/'
+                : '/' + idRichiesto.replace(/-/g, '/');
+            history.pushState({ pagina: idRichiesto }, '', path);
+        }
+    } else {
+        document.getElementById('errore-404').style.display = 'block';
+        if (aggiornaUrl) {
+            history.pushState({ pagina: null }, '', '/' + idRichiesto);
+        }
+    }
+
+    document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+}
+
+// Gestisce il tasto Indietro/Avanti del browser
+window.addEventListener('popstate', function(e) {
+    if (e.state && e.state.pagina) {
+        mostraPagina(e.state.pagina, false);
+    } else {
+        mostraPagina('home', false);
+    }
+});
+
+// Legge l'URL al caricamento per gestire link diretti
+window.onload = function() {
+    const path = window.location.pathname.replace(/^\//, '').replace(/\/$/, '');
+    
+    if (!path || path === '') {
+        mostraPagina('home', false);
+    } else {
+        // Converte /eventi/conclusi → eventi-conclusi
+        const idPagina = path.replace(/\//g, '-');
+        mostraPagina(idPagina, false);
+    }
+
+    // Imposta lo stato iniziale nello storico
+    history.replaceState(
+        { pagina: path ? path.replace(/\//g, '-') : 'home' },
+        '',
+        window.location.pathname
+    );
+};
+</script>
+
+
+</body>
+</html>

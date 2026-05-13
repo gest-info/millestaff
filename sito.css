@@ -1,0 +1,265 @@
+/* ============================================
+   MILLESTAFF - sito.css (Versione Ottimizzata)
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: white;
+    line-height: 1.6;
+}
+
+/* ---- BANNER TOP ---- */
+#banner-top {
+    background-color: #f8f8f8;
+    color: #333;
+    text-align: center;
+    font-size: 14px;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    font-weight: 600;
+}
+
+/* ---- ERO / INTESTAZIONI ---- */
+#intestazione-home, #intestazione {
+    background-image: url('intestazione-home.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    min-height: 450px;
+    justify-content: center;
+    align-items: center;
+}
+
+#intestazione {
+    opacity: 0.85; /* Leggermente più visibile per leggere meglio */
+}
+
+/* ---- NAVBAR ---- */
+#barra-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 10px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(5px); /* Effetto sfocato moderno */
+}
+
+#nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+#nav-title {
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+#nav-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.nav-link.active {
+    background-color: #f5c400;
+    color: black;
+}
+
+/* ---- DROPDOWN MENU ---- */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 4px;
+    top: 100%;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content li a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.dropdown-content li a:hover {
+    background-color: #f5c400;
+}
+
+/* ---- TITOLI E TESTI ---- */
+h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 60pt;
+    color: white;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: #f5c400;
+    text-decoration-thickness: 8px;
+    letter-spacing: 4px;
+    text-shadow: 3px 3px 10px rgba(0,0,0,0.6);
+}
+
+h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 28pt;
+    color: #111;
+    text-align: center;
+    margin: 40px 0 20px;
+    text-transform: uppercase;
+}
+
+#contenuto {
+    /*padding: 40px 10%;*/
+    text-align: center;
+}
+
+.sottotitolo {
+    font-size: 18pt;
+    color: #444;
+    margin-bottom: 30px;
+}
+
+.comunicazione {
+    font-size: 14pt;
+    color: #d9534f; /* Un rosso discreto per l'avviso */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.testo {
+    font-size: 13pt;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* ---- COLONNE HOME ---- */
+#colonne-home {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 30px 20px;
+}
+
+.colonna {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    /*padding: 20px;*/
+    transition: transform 0.3s;
+    justify-content: center; 
+}
+
+.colonna:hover {
+    transform: translateY(-10px);
+}
+
+.colonna img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.colonna h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* ---- BOTTONI ---- */
+.bottone {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+button, #bottone {
+    background-color: #f5c400;
+    color: black;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 10px 25px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    text-transform: uppercase;
+    justify-content: center; 
+    display: flex;
+    align-items: center;
+    margin: 4px;
+}
+
+button:hover {
+    background-color: black;
+    color: #f5c400;
+    transform: scale(1.05);
+}
+
+/* ---- FOOTER E PAGINE ---- */
+.pagina {
+    display: none;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+footer {
+    padding: 40px 0;
+    text-align: center;
+    background-color: #f1f1f1;
+    margin-top: 50px;
+    font-size: 14px;
+}
+
+/* ---- UTILITY ---- */
+a { text-decoration: none; color: inherit; }
