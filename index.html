@@ -67,7 +67,7 @@
     <!-- ======================
          PAGINA HOME 
          ====================== -->
-    <div id="pagina-" class="pagina">
+    <div id="pagina-millestaff" class="pagina">
         <!-- Titolo hero -->
     <!-- Intestazione con immagine di sfondo -->
     <div id="intestazione-home">
@@ -299,7 +299,7 @@ window.onload = function() {
     }
 
     // Imposta lo stato iniziale nello storico del browser
-    const statoIniziale = path && path !== 'index.html' ? path.replace(/\//g, '-') : '';
+    const statoIniziale = path && path !== 'index.html' ? path.replace(/\//g, '-') : 'millestaff';
     history.replaceState(
         { pagina: statoIniziale },
         '',
