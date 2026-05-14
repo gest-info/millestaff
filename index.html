@@ -299,7 +299,7 @@ window.onload = function() {
     }
 
     // Imposta lo stato iniziale nello storico del browser
-    const statoIniziale = path && path !== 'index.html' ? path.replace(/\//g, '-') : 'home';
+    const statoIniziale = path && path !== 'index.html' ? path.replace(/\//g, '-') : '';
     history.replaceState(
         { pagina: statoIniziale },
         '',
